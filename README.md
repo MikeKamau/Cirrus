@@ -8,7 +8,7 @@ The app also implements the following features:
 * Ability to send confirmation emails to registered users
 * Login and logout
 * Password reset
-* Uploading, listing, downloading, deleting and sharing files through S3 pre-signed urls (Users must confirm their email addresses after registration to use these feature)
+* Uploading, listing, downloading, deleting and sharing files through S3 pre-signed urls (Users must confirm their email addresses after registration to use these features)
 
 **Setup**
 1. Clone the project to your local system **git clone https://github.com/MikeKamau/Cirrus.git**
