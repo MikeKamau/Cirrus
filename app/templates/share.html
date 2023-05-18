@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block app_content %}
+<b>Please enter the email address of the user who you wish to share the file with</b>
+<div class="row">
+  <div class="col-md-4">
+    <form method="POST" action="/share">
+      <input type="hidden" name="s3_key" value="{{ s3_key }}">
+      {{ form.csrf_token }}
+      {{ wtf.form_field(form.email) }}
+      {{ wtf.form_field(form.submit) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

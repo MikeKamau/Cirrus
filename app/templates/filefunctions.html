@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block app_content %}
+  <div class="">
+    <h3>Upload File:</h3>
+    <form action="/upload" method="POST" enctype="multipart/form-data" style="display: flex;">
+      <input type="file" name="file" style="margin-right: 10px;">
+      <button type="submit">Upload</button>
+    </form>
+  <hr>
+  <h3>Uploaded Files:</h3>
+  <ul>
+      {% for file in files %}
+          <li>
+              {{ file }}
+              <form action="/download" method="POST" style="display: inline;">
+                  <input type="hidden" name="s3_key" value="{{ file }}">
+                  <button type="submit">Download</button>
+              </form>
+              <form action="/delete" method="POST" style="display: inline;">
+                  <input type="hidden" name="s3_key" value="{{ file }}">
+                  <button type="submit">Delete</button>
+              </form>
+              <form action="/share" method="POST" style="display: inline;">
+                <input type="hidden" name="s3_key" value="{{ file }}">
+                <button type="submit">Share</button>
+            </form>          
+          </li>
+      {% endfor %}
+  </ul>
+  </div>
+{% endblock %}

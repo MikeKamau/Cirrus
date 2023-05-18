@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+  <p><b>Welcome to Cirrus, a very simple and lightweight cloud filestore that utilizes Flask and Boto3.</b></p>
+  <p>The app also implements the following features:</p>
+  <p>
+    <ul>
+      <li>User registration</li>
+      <li>Ability to send confirmation emails to registered users</li>
+      <li>Login and logout</li>
+      <li>Password reset</li>
+      <li>Uploading, listing, downloading, deleting and sharing files through S3 pre-signed urls (Users must confirm their email addresses after registration to use this feature)</li>
+    </ul>
+  </p>
+{% endblock %}
