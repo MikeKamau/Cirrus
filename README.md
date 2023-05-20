@@ -11,7 +11,7 @@ The app also implements the following features:
 * Uploading, listing, downloading, deleting and sharing files through S3 pre-signed urls (Users must confirm their email addresses after registration to use these features)
 
 **Setup**
-1. Clone the project to your local system **git clone https://github.com/MikeKamau/cirrus.git**
+1. Clone the project to your local system **git clone https://github.com/MikeKamau/Cirrus.git**
 
 2. Create a python virtual environment using conda and the provided environment.yml file
 
